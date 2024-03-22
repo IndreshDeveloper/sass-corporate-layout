@@ -1,0 +1,153 @@
+#our-team {
+    width: 100%;
+
+    .our-team-text-block {
+        h5 {
+            @media screen and (max-width: $xl) {
+                font-size: 19px;
+                line-height: 19px;
+                padding-bottom: 16px;
+                letter-spacing: 3px;
+            }
+
+            @media screen and (max-width: $lg) {
+                font-size: 18px;
+                padding-bottom: 15px;
+            }
+
+            @media screen and (max-width: $md) {
+                font-size: 17px;
+                padding-bottom: 14px;
+            }
+            
+            @media screen and (max-width: $sm) {
+                font-size: 16px;
+                padding-bottom: 12px;
+            }
+        }
+
+        h3 {
+            @media screen and (max-width: $xl) {
+                font-size: 36px;
+                line-height: 48px;
+            }
+
+            @media screen and (max-width: $lg) {
+                font-size: 33px;
+                line-height: 40px;
+            }
+
+            @media screen and (max-width: $md) {
+                font-size: 30px;
+                line-height: 38px;
+            }
+
+            @media screen and (max-width: $sm) {
+                font-size: 25px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .team {
+        gap: 30px;
+        padding-top: 80px;
+
+        @media screen and (max-width: $xl) {
+            padding-top: 70px;
+        }
+
+        @media screen and (max-width: $lg) {
+            padding-top: 60px;
+            gap: 25px;
+        }
+
+        @media screen and (max-width: $md) {
+            padding-top: 50px;
+        }
+
+        @media screen and (max-width: $sm) {
+            padding-top: 40px;
+        }
+
+        .team-members-col {
+            width: calc(33.33% - 20px);
+            border: 1px solid #F5F5F5;
+            border-radius: 15px;
+
+            &:nth-child(4){
+                display: none;
+            }
+
+            @media screen and (max-width: $lg) {
+                width: calc(33.33% - 16.66px);
+            }
+
+            @media screen and (max-width: $md) {
+                width: calc(50% - 12.5px);
+                &:nth-child(4){
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 100%;
+
+                &:nth-child(4){
+                    display: none;
+                }
+            }
+
+            .team-img-block {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .team-members-about {
+                padding: 26px 0 27px 25px;
+
+                @media screen and (max-width: $lg) {
+                    padding: 22px 0 22px 21px;
+                }
+
+                .team-m-name {
+                    font-size: $extrasmall-font;
+                    font-family: $Poppins-fontfamily;
+                    color: $secdarkblue-color;
+                    font-weight: $semi-bold;
+                    line-height: $team-line-height;
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 17px;
+                        line-height: 20px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+
+                .team-m-post {
+                    font-size: $minimum-fontsize;
+                    font-family: $Poppins-fontfamily;
+                    color: $seclight-grey-color;
+                    line-height: $post-line-height;
+                    font-weight: $regular;
+                    padding-top: 15px;
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 16px;
+                        padding-top: 10px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 14px;
+                        line-height: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

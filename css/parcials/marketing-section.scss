@@ -1,0 +1,293 @@
+#marketing-section {
+    width: 100%;
+    padding-bottom: 140px;
+
+    @media screen and (max-width: $xl) {
+        padding-bottom: 110px;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (max-width: $md) {
+        padding-bottom: 80px;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: 60px 0;
+    }
+
+    .marketing {
+        gap: 72px;
+        position: relative;
+
+        @media screen and (max-width: $xl) {
+            gap: 60px;
+        }
+
+        @media screen and (max-width: $md) {
+            gap: 40px;
+        }
+
+        @media screen and (max-width: $sm) {
+            gap: 30px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: -34px;
+            bottom: -34px;
+            width: 109px;
+            height: 109px;
+            background: url(../images/Combined-Shape.png);
+            z-index: -1;
+
+            @media screen and (max-width: $lg) {
+                display: none;
+            }
+        }
+
+        .marketing-col-block {
+            width: calc(50% - 36px);
+
+            @media screen and (max-width: $xl) {
+                width: calc(50% - 30px);
+            }
+
+            @media screen and (max-width: $lg) {
+                width: 100%;
+            }
+
+            .mar-member-img {
+                gap: 26px;
+                align-items: self-start;
+
+                @media screen and (max-width: $lg) {
+                    gap: 60px;
+                }
+
+                @media screen and (max-width: $md) {
+                    gap: 40px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    gap: 30px;
+                }
+
+                .client-mar-face {
+                    width: calc(50% - 13px);
+
+                    @media screen and (max-width: $md) {
+                        width: calc(50% - 20px);
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        width: calc(50% - 15px);
+                    }
+
+                    &:nth-child(even) {
+                        position: relative;
+                        margin-top: 62px;
+
+                        @media screen and (max-width: $xl) {
+                            margin-top: 52px;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            margin-top: 30px;
+                        }
+                    }
+
+
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        right: -100%;
+                        top: 0;
+                        bottom: -100%;
+                        background: url(../images/worklap.png);
+                        -webkit-transform: scale(0);
+                        transform: scale(0);
+                        -webkit-transition: all ease 0.5s;
+                        transition: all ease 0.5s;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -100%;
+                        top: -100%;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(148, 187, 233, 100);
+                        transition: all ease 0.5s;
+                        transform: scale(0);
+                        z-index: 1;
+                        opacity: 50%;
+                    }
+
+                    &:hover::before {
+                        left: 0;
+                        top: 0;
+                        transform: scale(1.1);
+                    }
+
+                    &:hover::after {
+                        -webkit-transform: scale(1);
+                        transform: scale(1);
+                        right: 0;
+                        bottom: 0;
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .marketing-col-block {
+            .market-text-block {
+                h5 {
+                    @media screen and (max-width: $xl) {
+                        font-size: 19px;
+                        line-height: 19px;
+                        padding-bottom: 16px;
+                        letter-spacing: 3px;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 18px;
+                        padding-bottom: 15px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 17px;
+                        padding-bottom: 14px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 16px;
+                        padding-bottom: 12px;
+                    }
+                }
+
+                h2 {
+                    @media screen and (max-width: $xl) {
+                        font-size: 42px;
+                        line-height: 60px;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 40px;
+                        line-height: 55px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 38px;
+                        line-height: 50px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 27px;
+                        line-height: 35px;
+                    }
+                }
+
+                p {
+                    color: $darkgrey-color;
+                    padding: 29px 0 26px 0;
+
+                    @media screen and (max-width: $xl) {
+                        padding: 25px 0;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        padding: 22px 0;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        padding: 17px 0;
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+                }
+
+                a {
+                    border-radius: 2px;
+                    font-size: $extra-minimum-font;
+                    transition: all ease 0.5s;
+                    line-height: 22px;
+                    position: relative;
+                    z-index: 11;
+
+                    @media screen and (max-width: $xl) {
+                        font-size: 15px;
+                        padding: 13px 16px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 14px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 13px;
+                        padding: 12px 10px;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 0;
+                        height: 100%;
+                        background: $primary-color;
+                        transition: all ease 0.3s;
+                        border-radius: 2px 0 0 2px;
+                        opacity: 100%;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 0;
+                        height: 100%;
+                        background: $primary-color;
+                        transition: all ease 0.3s;
+                        border-radius: 0 2px 2px 0;
+                        opacity: 100%;
+                    }
+
+                    &:hover::before,
+                    &:hover::after {
+                        width: 50%;
+
+                    }
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+
+                    span {
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    // &:hover {
+                    //     background: $primary-color;
+                    // }
+                }
+            }
+        }
+    }
+}

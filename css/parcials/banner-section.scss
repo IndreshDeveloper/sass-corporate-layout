@@ -1,0 +1,217 @@
+#banner-section {
+    width: 100%;
+    background: $darkblue-color;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        bottom: 26px;
+        width: 44px;
+        height: 112px;
+        background: url(../images/Combined-Shape.png);
+        filter: brightness(0) invert(1);
+
+        @media screen and (max-width: $xl) {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 26px;
+        width: 44px;
+        height: 112px;
+        background: url(../images/Combined-Shape.png);
+        filter: brightness(0) invert(1);
+
+        @media screen and (max-width: $lg) {
+            height: 70px;
+        }
+
+        @media screen and (max-width: $md) {
+            display: none;
+        }
+    }
+
+    .banner-main-block {
+        width: auto;
+        gap: 20px;
+
+        @media screen and (max-width: $sm) {
+            gap: 0;
+        }
+
+        .banner-col {
+            width: calc(50% - 10px);
+            position: relative;
+            z-index: 1;
+
+            @media screen and (max-width: $md) {
+                width: 100%;
+            }
+
+            .banner-text-left-col {
+                max-width: 580px;
+
+                @media screen and (max-width: $lg) {
+                    max-width: inherit;
+                }
+
+                @media screen and (max-width: $md) {
+                    text-align: center;
+                    padding: 48px 0;
+                }
+
+                @media screen and (max-width: $sm) {
+                    padding: 30px 0;
+                }
+
+
+                h1 {
+                    span {
+                        color: $orange-color;
+                    }
+
+                    @media screen and (max-width: $xl) {
+                        font-size: 48px;
+                        line-height: 70px;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 36px;
+                        line-height: 50px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 34px;
+                        line-height: 45px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 29px;
+                        line-height: 40px;
+                    }
+                }
+
+                p {
+                    color: #F4F3F3;
+                    padding: 23px 0;
+
+                    @media screen and (max-width: $lg) {
+                        padding: 20px 0;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 15px;
+                    }
+                }
+
+                a {
+                    border-radius: 2px;
+                    font-size: $extrasmall-font;
+                    line-height: $extrasmall-line-height;
+                    transition: all ease 0.5s;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 0;
+                        height: 100%;
+                        background: $secondary-color;
+                        transition: all ease 0.3s;
+                        border-radius: 2px 0 0 2px;
+                        opacity: 100%;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 0;
+                        height: 100%;
+                        background: $secondary-color;
+                        transition: all ease 0.3s;
+                        border-radius: 0 2px 2px 0;
+                        opacity: 100%;
+                    }
+
+                    &:hover::before,
+                    &:hover::after {
+                        width: 50%;
+
+                    }
+
+                    &:hover {
+                        color: $orange-color;
+                    }
+
+                    span {
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 17px;
+                        line-height: 17px;
+                        padding: 12px 15px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 15px;
+                        line-height: 15px;
+                        padding: 11px 12px;
+                    }
+
+                }
+            }
+        }
+
+        .banner-col {
+            
+            .banner-image-right-col {
+                overflow: hidden;
+                object-fit: cover;
+
+                @media screen and (max-width: $md) {
+                    text-align: center;
+                }
+
+                img {
+                    transition: all ease 0.5s;
+                    transform: scale(1);
+                    margin-top: 54px;
+                    width: 100%;
+
+                    @media screen and (max-width: $xl) {
+                        margin-top: 50px;
+                    }
+
+                    @media screen and (max-width: $lg) {
+                        margin-top: 45px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        margin-top: 0;
+                        width: 80%;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

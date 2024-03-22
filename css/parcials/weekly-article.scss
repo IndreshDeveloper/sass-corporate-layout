@@ -1,0 +1,186 @@
+#weekly-article {
+    width: 100%;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        left: 0px;
+        bottom: 0;
+        width: 56px;
+        height: 112px;
+        background: url(../images/Combined-Shape.png);
+        // z-index: -1;
+
+        @media screen and (max-width: $xl) {
+            display: none;
+        }
+    }
+
+    .article {
+        background: #F3F3F3;
+        margin: 130px -15px 105px -15px;
+        padding: 84px 150px;
+
+        @media screen and (max-width: $xl) {
+            margin: 120px 0 100px 0;
+        }
+
+        @media screen and (max-width: $lg) {
+            margin: 100px 0 90px 0;
+            padding: 80px 30px;
+        }
+
+        @media screen and (max-width: $md) {
+            margin: 90px 0 80px 0;
+            padding: 60px 15px;
+            gap: 20px;
+        }
+
+        @media screen and (max-width: $sm) {
+            margin: 70px 0 60px 0;
+            padding: 50px 10px;
+            gap: 13px;
+        }
+
+        .weekly-article-text-block {
+            width: 70%;
+            border-right: 1px solid $primary-color;
+
+            @media screen and (max-width: $md) {
+                width: 100%;
+                border-right: none;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            h4 {
+                font-weight: $semi-bold;
+                color: $primary-color;
+                line-height: 44px;
+                max-width: 450px;
+
+                @media screen and (max-width: $xl) {
+                    font-size: 26px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    font-size: 24px;
+                    line-height: 35px;
+                    max-width: 340px;
+                }
+
+                @media screen and (max-width: $md) {
+                    max-width: inherit;
+                    text-align: center;
+                    font-size: 23px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+
+            p {
+                font-family: $Nunito-Sans-fontfamily;
+                font-size: $light-fontsize;
+                padding-top: 20px;
+                max-width: 415px;
+
+                @media screen and (max-width: $xl) {
+                    padding-top: 16px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    padding-top: 10px;
+                    max-width: 400px;
+                }
+
+                @media screen and (max-width: $md) {
+                    max-width: inherit;
+                    text-align: center;
+                    padding-top: 7px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .weekly-btn {
+            width: 30%;
+
+            @media screen and (max-width: $md) {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            a {
+                border-radius: 2px;
+                font-size: $button-fontsize;
+                line-height: $button-line-height;
+                position: relative;
+                transition: all ease 0.5s;
+
+                @media screen and (max-width: $lg) {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 18px;
+                    padding: 10px 13px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $primary-color;
+                    transition: all ease 0.3s;
+                    border-radius: 2px 0 0 2px;
+                    opacity: 100%;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $primary-color;
+                    transition: all ease 0.3s;
+                    border-radius: 0 2px 2px 0;
+                    opacity: 100%;
+                }
+
+                &:hover::before,
+                &:hover::after {
+                    width: 50%;
+
+                }
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                span {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                // &:hover {
+                //     background: $primary-color;
+                // }
+            }
+        }
+    }
+}

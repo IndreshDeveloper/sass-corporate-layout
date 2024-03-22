@@ -1,0 +1,340 @@
+body {
+    padding-top: 100px;
+
+    @media screen and (max-width: $xl) {
+        padding-top: 92px;
+    }
+    
+    @media screen and (max-width: $lg) {
+        padding-top: 82px;
+    }
+
+    @media screen and (max-width: $md) {
+        padding-top: 72px;
+    }
+
+}
+
+.fixed-header {
+    #header {
+        padding: 10px 0;
+        transition: all ease 0.5s;
+
+        .header-main-block {
+            .navigation {
+
+                @media screen and (max-width: $sm) {
+                    top: 72px;
+                    height: calc(100vh - 72px);
+                }
+            }
+        }
+
+    }
+}
+
+#header.open-menu {
+    .header-main-block {
+        .navigation {
+            right: 0;
+            border-top: 1px solid #000;
+        }
+
+        .header-btn {
+            .menu-bar {
+                .m-line {
+                    &.line3 {
+                        width: 0;
+                    }
+
+                    &.line1 {
+                        transform: rotate(45deg);
+                        top: 8px;
+                    }
+
+                    &.line2 {
+                        transform: rotate(-45deg);
+                        top: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#header {
+    padding: 24px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background: $secondary-color;
+    box-shadow: 0 0 3px rgba(233, 233, 216, 0.74);
+    transition: all ease 0.5s;
+    top: 0;
+
+    @media screen and (max-width: $xl) {
+        padding: 20px 0;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding: 15px 0;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: 10px 0;
+    }
+
+    .header-main-block {
+        position: relative;
+
+        .header-logo {
+            width: 20%;
+
+            @media screen and (max-width: $md) {
+                width: 50%;
+            }
+        }
+
+
+
+        .navigation {
+            width: 60%;
+            transition: all ease 0.5s;
+
+
+            @media screen and (max-width: $md) {
+                display: block;
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: $secondary-color;
+                transition: all ease 0.5s;
+                padding: 20px 0;
+            }
+
+            ul {
+                gap: 56px;
+
+                @media screen and (max-width: $xl) {
+                    gap: 50px;
+
+                }
+
+                @media screen and (max-width: $lg) {
+                    gap: 30px;
+                }
+
+                @media screen and (max-width: $md) {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                li {
+
+                    transition: all ease 0.5s;
+
+                    @media screen and (max-width: $md) {
+                        &:hover {
+                            background: $orange-color;
+                            color: $secondary-color;
+                            padding: 8px 5px;
+                            border-radius: 2px;
+
+                            &::after {
+                                width: 0;
+                            }
+                        }
+                    }
+
+                    a {
+                        font-family: $lato-fontfamily;
+                        font-size: $extra-minimum-font;
+                        color: $primary-color;
+                        font-weight: $regular;
+
+                        @media screen and (max-width: $md) {
+                            font-weight: $semi-bold;
+                            padding: 0 20px;
+                        }
+
+                        // @media screen and (max-width: $sm) {
+                            
+                        // }
+
+                        &.active {
+                            color: $orange-color;
+                            font-weight: $semi-bold;
+
+                            @media screen and (max-width: $md) {
+                                color: $primary-color;
+                            }
+
+                            &::after {
+                                width: 100%;
+
+                                @media screen and (max-width: $md) {
+                                    width: 0;
+                                }
+                            }
+
+                        }
+
+                        &:hover {
+                            color: $orange-color;
+
+                            @media screen and (max-width: $md) {
+                                color: $secondary-color;
+                            }
+                        }
+
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
+                            width: 0;
+                            height: 2px;
+                            background: $orange-color;
+                            transition: all ease 0.5s;
+                            border-radius: 1px;
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+
+                            @media screen and (max-width: $md) {
+                                width: 0;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+        .header-btn {
+            width: 20%;
+            position: relative;
+
+            @media screen and (max-width: $md) {
+                width: 50%;
+                justify-content: center;
+
+            }
+
+            a {
+                transition: all ease 0.5s;
+                position: relative;
+                z-index: 99;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $primary-color;
+                    transition: all ease 0.3s;
+                    border-radius: 5px 0 0 5px;
+                    opacity: 100%;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $primary-color;
+                    transition: all ease 0.3s;
+                    border-radius: 0 5px 5px 0;
+                    opacity: 100%;
+                }
+
+                &:hover::before,
+                &:hover::after {
+                    width: 50%;
+
+                }
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                span {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                @media screen and (max-width: $lg) {
+                    padding: 12px 13px;
+                    font-size: 13px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    padding: 0;
+                    font-size: 1;
+                }
+
+                &.btn{
+                    @media screen and (max-width: $sm) {
+                        display: none;
+                    }
+                }
+
+            }
+
+            .menu-bar {
+                position: absolute;
+                right: 0;
+                bottom: 16px;
+                z-index: 99;
+                display: none;
+
+                @media screen and (max-width: $md) {
+                    display: block !important;
+                }
+
+                @media screen and (max-width:  $sm) {
+                    bottom: -2px;
+                }
+
+
+                .m-line {
+                    height: 4px;
+                    background: $primary-color;
+                    width: 35px;
+                    transition: all ease 0.5s;
+
+                    &.line2 {
+                        position: relative;
+                        top: 12px;
+                    }
+
+                    &.line1 {
+                        position: relative;
+                        transform: rotate(0deg);
+                        top: 0;
+                    }
+
+                    &.line3 {
+                        position: relative;
+                        transform: rotate(0deg);
+                        top: 0;
+                    }
+
+
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,195 @@
+#features-section {
+    width: 100%;
+    padding: 140px 0;
+    position: relative;
+
+    @media screen and (max-width: $xl) {
+        padding: 110px 0;
+    }
+
+    @media screen and (max-width: $lg) {
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: $md) {
+        padding: 80px 0;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: 55px 0;
+    }
+
+
+    &::after {
+        position: absolute;
+        content: '';
+        left: 0px;
+        top: 175px;
+        width: 56px;
+        height: 112px;
+        background: url(../images/Combined-Shape.png);
+
+        @media screen and (max-width: $xl) {
+            top: 20px;
+        }
+
+        @media screen and (max-width: $lg) {
+            width: 40px;
+            height: 70px;
+        }
+
+        @media screen and (max-width: $sm) {
+            display: none;
+        }
+    }
+
+    .features-text-block {
+        width: auto;
+
+        h5 {
+            @media screen and (max-width: $xl) {
+                font-size: 19px;
+                line-height: 19px;
+                padding-bottom: 16px;
+                letter-spacing: 3px;
+            }
+
+            @media screen and (max-width: $lg) {
+                font-size: 18px;
+                padding-bottom: 15px;
+            }
+
+            @media screen and (max-width: $md) {
+                font-size: 17px;
+                padding-bottom: 14px;
+            }
+
+            @media screen and (max-width: $sm) {
+                font-size: 16px;
+                padding-bottom: 12px;
+            }
+        }
+
+        h3 {
+            @media screen and (max-width: $xl) {
+                font-size: 36px;
+                line-height: 48px;
+            }
+
+            @media screen and (max-width: $lg) {
+                font-size: 33px;
+                line-height: 40px;
+            }
+
+            @media screen and (max-width: $md) {
+                font-size: 30px;
+                line-height: 38px;
+            }
+
+            @media screen and (max-width: $sm) {
+                font-size: 25px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    .features {
+        gap: 110px;
+        padding-top: 76px;
+
+        @media screen and (max-width: $xl) {
+            gap: 90px;
+            padding-top: 65px;
+        }
+
+        @media screen and (max-width: $lg) {
+            column-gap: 30px;
+            row-gap: 30px;
+            padding-top: 55px;
+        }
+
+        @media screen and (max-width: $sm) {
+            padding-top: 45px;
+        }
+
+        .features-card-block {
+            width: calc(33.33% - 73.33px);
+
+            &:nth-child(4) {
+                display: none;
+            }
+
+            @media screen and (max-width: $xl) {
+                width: calc(33.33% - 60px);
+            }
+
+            @media screen and (max-width: $lg) {
+                width: calc(50% - 15px);
+                border: 1px solid rgba(204, 207, 207, .39);
+                border-radius: 10px;
+                padding: 15px;
+
+                &:nth-child(4) {
+                    display: block;
+                }
+            }
+
+            @media screen and (max-width: $sm) {
+                width: 100%;
+                &:nth-child(4){
+                    display: none;
+                }
+            }
+
+            .f-card-img {
+                img {
+                    width: auto;
+                }
+            }
+
+            h4 {
+                margin: 34px 0 15px 0;
+
+                @media screen and (max-width: $xl) {
+                    margin: 32px 0 15px 0;
+                    font-size: 27px;
+                    line-height: 27px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    font-size: 26px;
+                    margin: 25px 0 15px 0;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 24px;
+                    
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 21px;
+                    margin: 20px 0 12px 0;
+                }
+            }
+
+            p {
+                font-size: $minimum-fontsize;
+                color: $light-grey-color;
+                line-height: $small-line-height;
+
+                @media screen and (max-width: $xl) {
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

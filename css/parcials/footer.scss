@@ -1,0 +1,245 @@
+#footer {
+    width: 100%;
+    background: $darkblue-color;
+    padding: 73px 0;
+
+    @media screen and (max-width: $xl) {
+        padding: 70px 0;
+    }
+
+    @media screen and (max-width: $md) {
+        padding: 60px 0;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: 45px 0;
+        text-align: center;
+    }
+
+
+    .footer-row {
+        @media screen and (max-width: $md) {
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+
+
+        .footer-col-left-block {
+            width: 30%;
+
+            @media screen and (max-width: $xl) {
+                width: 35%;
+            }
+
+            @media screen and (max-width: $lg) {
+                width: 40%;
+            }
+
+            @media screen and (max-width: $md) {
+                width: 100%;
+            }
+
+            p {
+                color: $secondary-color;
+                font-size: $extrasmall-font;
+                font-family: $Inter-fontfamily;
+                line-height: $footerp-line-height;
+                padding: 25px 0 41px 0;
+                max-width: 330px;
+
+                @media screen and (max-width: $xl) {
+                    font-size: 19px;
+                    line-height: 35px;
+                    padding: 25px 0 35px 0;
+                    max-width: 320px;
+                }
+
+                @media screen and (max-width: $lg) {
+                    font-size: 17px;
+                    line-height: 30px;
+                    padding: 20px 0 25px 0;
+                    max-width: 260px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 15px 0 20px 0;
+                    margin: 0 auto;
+                }
+
+
+            }
+
+            ul.footer-icon {
+                gap: 25px;
+
+                @media screen and (max-width: $lg) {
+                    gap: 20px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    gap: 15px;
+                    justify-content: center;
+                }
+
+                li {
+                    a {
+                        width: 50px;
+                        height: 50px;
+                        background: $orange-color;
+                        border-radius: 50%;
+                        transition: all ease 0.5s;
+
+                        &:hover {
+                            background: $secondary-color;
+
+                        }
+
+                        @media screen and (max-width: $xl) {
+                            width: 45px;
+                            height: 45px;
+                        }
+
+                        @media screen and (max-width: $lg) {
+                            width: 40px;
+                            height: 40px;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        &:hover i {
+                            color: $orange-color;
+                        }
+
+                        i {
+                            color: $secondary-color;
+                            font-size: 25px;
+                            display: block;
+                            transition: all ease 0.5s;
+
+                            @media screen and (max-width: $xl) {
+                                font-size: 22px;
+                            }
+
+                            @media screen and (max-width: $lg) {
+                                font-size: 20px;
+                            }
+
+                            @media screen and (max-width: $sm) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-col-right-block {
+            width: 70%;
+            gap: 120px;
+
+            @media screen and (max-width: $xl) {
+                width: 65%;
+                gap: 100px;
+            }
+
+            @media screen and (max-width: $lg) {
+                width: 60%;
+                gap: 70px;
+            }
+
+            @media screen and (max-width: $md) {
+                width: 100%;
+                gap: 30px;
+            }
+
+            @media screen and (max-width: $sm) {
+                gap: 15px;
+            }
+
+            .footer-text-block {
+                width: calc(33.33% - 80px);
+
+                @media screen and (max-width: $xl) {
+                    width: calc(33.33% - 66.66px);
+                }
+
+                @media screen and (max-width: $lg) {
+                    width: calc(33.33% - 46.66px);
+                }
+
+                @media screen and (max-width: $md) {
+                    width: calc(33.33% - 20px);
+                }
+
+                @media screen and (max-width: $sm) {
+                    width: 100%;
+                }
+
+                h4 {
+                    color: $secondary-color;
+                    font-size: $extrasmall-font;
+                    font-family: $Nunito-Sans-fontfamily;
+                    font-weight: $bold;
+                    line-height: $footerp-line-height;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 18px;
+                }
+
+                ul {
+                    padding-top: 30px;
+                    gap: 24px;
+
+                    @media screen and (max-width: $xl) {
+                        padding-top: 25px;
+                        gap: 20px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        padding-top: 20px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        gap: 10px;
+                        padding-top: 10px;
+                    }
+
+                    li {
+                        a {
+                            color: $secondary-color;
+                            font-family: $Nunito-Sans-fontfamily;
+                            font-size: $minimum-fontsize;
+                            line-height: 32px;
+                            transition: all ease 0.5s;
+
+                            @media screen and (max-width: $xl) {
+                                font-size: 17px;
+                            }
+
+                            @media screen and (max-width: $lg) {
+                                line-height: 25px;
+                            }
+
+                            @media screen and (max-width: $md) {
+                                font-size: 16px;
+                                line-height: 20px;
+                            }
+
+                            &:hover {
+                                color: $orange-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

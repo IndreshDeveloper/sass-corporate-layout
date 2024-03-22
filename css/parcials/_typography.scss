@@ -1,0 +1,67 @@
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.f-direction {
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #fff;
+}
+
+h1 {
+    @include font($extralarge-font, $Poppins-fontfamily, $secondary-color, $bold, $extralarge-line-height);
+}
+
+h2 {
+    @include font ($large-font, $Poppins-fontfamily, $darkblue-color, $semi-bold, $large-line-height);
+}
+
+h3 {
+    @include font($medium-font, $Poppins-fontfamily, $darkblue-color, $semi-bold, $medium-line-height);
+}
+
+h4 {
+    @include font($small-font, $Poppins-fontfamily, $darkblue-color, $medium, $small-line-height);
+}
+
+h5 {
+    @include font ($extrasmall-font, $Poppins-fontfamily, $orange-color, $medium, $extrasmall-line-height);
+
+    @include space ($latterspace, $pbottom);
+}
+
+p {
+    @include font ($extra-minimum-font, $Poppins-fontfamily, $primary-color, $regular, $p-line-height);
+}
+
+.btn {
+    @include font($light-fontsize, $lato-fontfamily, $secondary-color, $bold, $header-btn-line-height);
+
+    @include btn ($padding, $orange-color, $border-radious, $display, $transition);
+}

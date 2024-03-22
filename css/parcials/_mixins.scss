@@ -1,0 +1,20 @@
+@mixin font($size, $fontfamily, $color, $weight, $height) {
+    font-size: $size;
+    font-family: $fontfamily;
+    color: $color;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin space ($latterspace, $pbottom) {
+    letter-spacing: $latterspace;
+    padding-bottom: $pbottom;
+}
+
+@mixin btn ($pdding, $bg, $border-radious, $display, $transition) {
+    padding: $pdding;
+    background: $bg;
+    border-radius: $border-radious;
+    display: $display;
+    transition: $transition;
+}
